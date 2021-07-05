@@ -1,2 +1,6 @@
-# processamento-grafico
-Repositório destinado aos projetos da disciplina de PG 2020.2
+# Processamento Gráfico - 2020.2
+
+## Módulo 1
+- [x] Projeto 1
+    - [ ] Modelagem 2D
+    - [ ] Modelagem 3D
