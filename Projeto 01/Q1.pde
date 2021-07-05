@@ -11,7 +11,7 @@ float y = h - 15;
 float velocidadeY = 10;
 float gravidade = 0.5;
 float raio = 30;
-float velocidadeX = 2*PI;
+float velocidadeX = ((w / 10) * 0.1) - 1;
 
 void setup(){
   size(800,400);
@@ -36,4 +36,5 @@ void draw(){
   noStroke();
   fill(255,255,0);
   ellipse(x, y, raio, raio);
+  
 }
