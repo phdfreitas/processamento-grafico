@@ -1,3 +1,4 @@
+
 void setup() {
   size(1000,1000,P3D);
 }
@@ -11,18 +12,24 @@ void setupCoodinates() {
 
   strokeWeight(0.8);
   stroke(255,0,0);
-  line(0,0,0,width,0,0);  //eixo X
+  line(0,0,0,width,0,0);  //eixo X vermelho
   stroke(0,255,0);
-  line(0,0,0,0,width,0);  //eixo Y
+  line(0,0,0,0,width,0);  //eixo Y verde
   stroke(0,0,255);
-  line(0,0,0,0,0,width);  //eixo Z
+  line(0,0,0,0,0,width);  //eixo Z azul
   strokeWeight(0);
-  fill(255,0,0);
-  
+  noFill();
 }
 
 void draw() {
   setupCoodinates();
   strokeWeight(1);
+  stroke(1);
+  rotateX(radians(30));
+  square(0,0,20);
+  translate(10,10);
+  circle(0,0,20);
+  
+  
   
 }
