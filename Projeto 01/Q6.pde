@@ -6,9 +6,8 @@ void setupCoodinates() {
   background(153);
   translate(width/4,(2*height)/3);
   scale(10,-10);
-  //rotateZ(radians(60));
-  //rotateX(radians(60));
-  //rotateZ(radians(60));
+  rotateX(radians(-60));
+  rotateZ(radians(-60));
 
   strokeWeight(0.8);
   stroke(255,0,0);
