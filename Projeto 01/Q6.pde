@@ -1,3 +1,12 @@
+float alphaC = 0;
+float alphaP = 0;
+float Xcirculo = 7.5; //posicao inicial circulo menor
+float Ycirculo = 0;
+float Xponto = 2.5;
+float Yponto = 0;
+float w =PI/120; //4 segundos
+float wP = -1*PI/24;
+
 
 void setup() {
   size(1000,1000,P3D);
@@ -21,15 +30,37 @@ void setupCoodinates() {
   noFill();
 }
 
+void drawMinorCircle(float x, float y) { //teste
+  translate(x,y,2.5);
+  rotateX(radians(90));
+  rotateY(radians(90));
+  circle(Xcirculo,Ycirculo,5); //iniciando círculo menor
+}
+
 void draw() {
   setupCoodinates();
   strokeWeight(1);
   stroke(1);
   rotateX(radians(30));
   square(0,0,20);
-  translate(10,10);
-  circle(0,0,20);
+  translate(10,10,0);
+  point(0,0,1);
   
+  pushMatrix();
+  circle(0,0,20); //círculo maior
+  rotate(alphaC);
   
+  drawMinorCircle(Xcirculo,Ycirculo);
+  //circle(Xcirculo,Ycirculo,5); //iniciando círculo menor
+  translate(7.5,0);
+  rotate(alphaP);
+  strokeWeight(3);//tamanho do contorno
+  stroke(255,0,0);//cor vermelha
+  point(Xponto,Yponto); //inicia o ponto de referencia
   
+  popMatrix();
+  rotate(alphaC);
+  alphaC += w;
+  alphaP += wP;
+   
 }
