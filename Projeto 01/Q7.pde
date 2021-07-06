@@ -9,7 +9,7 @@ float Bx = -100;
 float Bz = 500;
 
 float Cx = 100;
-float Cz = 100;
+float Cz = 500;
 //velocidade angular
 float w1 = PI/360;
 float w2 = PI/120;
